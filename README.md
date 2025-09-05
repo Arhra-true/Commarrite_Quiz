@@ -10,7 +10,7 @@ In this project I aim to create a quiz that users can take on either a computer 
 2. Accessibility features for those that need it (including but not limited to alt texts, languages, colour schemes, read-out features for the blind).
 3. Questions to be answered adding to the end score on which were correct and which were not.
 4. Provide a final score of X/X questions to the user.
-5. A "reset" button so the user may start again should the so choose.
+5. A "reset" button so the user may start again should they so choose.
 
 ### Extra features to consider
 1. The first and last questions will be fixed in place (given the theme of the quiz), the rest should be random in order each time the app first loads (or resets).
