@@ -1,23 +1,27 @@
 // Create javascript function to store the selected answer and record user score.
-
 //create variable to store user score, increment when correct answer selected
 let userScore = 0;
-let incremented = false;
 
-const submitAnswer = (selectedAnswer) => {
-   if (document.querySelector('input[name="question1"]:checked').value === 'a' && !incremented) {  
+
+function submitAnswer () {
+   if (document.querySelector('input[name="question1"]:checked').value === 'a') {  
     userScore++;
-    incremented = true;
-        console.log(userScore);
-        console.log(incremented); 
+    console.log(userScore);
     }
-};
+  };
+
+
+
+
+
+
+/* Decided to disbale the button after use, thise way thr answer is locked in and it stops repeated use of the button.
+
 
 /* Function works as intended, no longer increments each time. 
 I need to nest the variables locally for each question lest conflcits arise.
 The button will need to lock the question otherwise the user could select each answer and the score will increment when they click submit for each option
 */  
-
 
 
 
