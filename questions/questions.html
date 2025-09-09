@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMMARRIE QUIZ</title>
+    <title>COMMARRITE QUIZ</title>
     <link rel="stylesheet" href="questions.css">
 
 <!--break up code-->
@@ -19,7 +19,7 @@
        <li> 
         <label>
             <input type="radio" name="question1" value="a"/>
-            <span id="answers">No psykers of any kind are permitted in the dark city!</span>
+            <span id="answers">No psykers are permitted in the dark city!</span>
         </li>
         <li>
         <label>
@@ -39,7 +39,7 @@
             <span id="answers">Asdrubael Vect, the living muse and supreme overlord, commands all</span>
         </li>
         </label>
-        <button #id="answer-button1" onclick="submitAnswer(); this.disabled=true ">Submit answer</button> <!--when onclick triggers, log answer to total score if correct and use window.location to auto-scroll to next question-->
+        <button #id="answer-button1" onclick="submitAnswer(); disableQuestion(); this.disabled=true;">Submit answer</button> 
     </ul>
     <br>
     <ul class="quiz-question" id="question2">

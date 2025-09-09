@@ -4,18 +4,26 @@ let userScore = 0;
 
 
 function submitAnswer () {
-   if (document.querySelector('input[name="question1"]:checked').value === 'a') {  
+    if (document.querySelector('input[name="question1"]:checked').value === 'a') {  
     userScore++;
-    console.log(userScore);
-    }
-  };
+    console.log(userScore); 
+  }
+  
+}
+/* Need a way to streamline these two functions. */
+function disableQuestion () {
+ const answers = document.querySelectorAll('input[name="question1"]');
+ answers.forEach(answer => {
+   answer.disabled = true;
+ });  
+};
 
 
 
 
 
 
-/* Decided to disbale the button after use, thise way thr answer is locked in and it stops repeated use of the button.
+/* Decided to disbale the button after use, this way the answer is locked in and it stops repeated use of the button.
 
 
 /* Function works as intended, no longer increments each time. 
