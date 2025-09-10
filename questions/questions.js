@@ -2,23 +2,38 @@
 //create variable to store user score, increment when correct answer selected
 let userScore = 0;
 
+const answer1 = document.querySelector('input[name="question1"]:checked').value === 'a';
+const answer2 = document.querySelector('input[name="question2"]:checked').value === 'c';
+
+
+
+const correctAnswers = placeholder; 
+
 
 function submitAnswer () {
     if (document.querySelector('input[name="question1"]:checked').value === 'a') {  
     userScore++;
     console.log(userScore); 
-  }
-  
+  } 
 }
 /* Need a way to streamline these two functions. */
+/*
 function disableQuestion () {
  const answers = document.querySelectorAll('input[name="question1"]');
  answers.forEach(answer => {
    answer.disabled = true;
  });  
 };
+*/
 
 
+
+function submitAnswer2 () {
+    if (document.querySelector('input[name="question2"]:checked').value === 'c') {  
+    userScore++;
+    console.log(userScore); 
+  } 
+}
 
 
 
