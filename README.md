@@ -13,7 +13,7 @@ In this project I aim to create a quiz that users can take on either a computer 
 5. A "reset" button so the user may start again should they so choose.
 
 ### Extra features to consider
-1. The first and last questions will be fixed in place (given the theme of the quiz), the rest should be random in order each time the app first loads (or resets).
+1. The first question will be fixed in place (given the theme of the quiz), the rest should be random in order each time the app first loads (or resets).
 2. Images themed around the question at hand to appear in various "visually cool" ways (sliding from the side, slowly appearing).
 3. Auto-scroll down feature once a question is answered and submitted (wether the question was answered correctly or not).
 4. Alternative CSS files for the visually impaired.
