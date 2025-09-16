@@ -1,0 +1,23 @@
+#Title {
+    color: blueviolet;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#Welcome {
+    color: blueviolet;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#Descriptor {
+    color:black;
+    text-align: center;     
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+#Begin {
+    text-align: center;
+    display: block;
+}

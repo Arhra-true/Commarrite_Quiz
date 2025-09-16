@@ -1,7 +1,7 @@
 // Create javascript function to store the selected answer and record user score.
 //create variable to store user score, increment when correct answer selected
 let userScore = 0;
-
+ 
 /*
 const answer1 = (document.querySelector('input[name="question1"]:checked').value === 'a')
 console.log(answer1);
@@ -186,3 +186,24 @@ The button will need to lock the question otherwise the user could select each a
 console.log(userScore);
 
 //create function to lock question once answer submitted and auto-scroll to next question */
+
+
+
+
+
+
+const quizQuestions = [
+  {
+  question: "What is the one and only rule in the dark city?",
+  answers: {
+    A: "No psykers are permitted in the dark city!",
+    B: "There are no rules in the dark city, fool!",
+    C: "Thou shall not steal.",
+    D: "Asdrubael Vect, the living muse and supreme overlord, commands all",
+  },
+  correctAnswer: "A"
+  },
+  {
+  question: "Who is the leader of The Kabal Of The Poisoned Tongue?"
+  }
+]
