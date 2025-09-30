@@ -92,46 +92,84 @@ const questions = [ //array of questions that are each an object containing an a
   },
 ]
 
-const questionsRandomized = questions.sort(() => Math.random() - 0.5); //randomizes the questions array. Need to make sure this works right.
+const questionsRandomized = questions.sort(() => Math.random() - 0.5); //randomizes the questions array.
+
+///
 
 const questionElement = document.getElementById('question'); //holds the questions text
 const answerButtonsElement = document.getElementById('answer-buttons'); //each button will hold a answer for the given question
 const nextButton = document.getElementById('next-btn'); //button to submit answer and move onto next question
 
+///
+
 let currentQuestionIndex = 0;
-let score = 0;
+let userScore = 0;
+
+///
 
 function startQuiz() {
   currentQuestionIndex = 0;
-  score = 0;
+  userScore = 0;
+  nextButton.innerHTML = "Next";
   showQuestion();
 }
 
 function showQuestion() {
   let currentQuestion = questionsRandomized[currentQuestionIndex];
   let questionNo = currentQuestionIndex + 1;
-  questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+  questionElement.innerHTML = questionNo + ". " + currentQuestion.question; //appends question number
+  resetState(); //Placing the resetState here solved the issue of the next button going 1 past the actual number of questions
 
  currentQuestion.answers.forEach(answer => {
     const button = document.createElement('button');
-    button.innerHTML = answer.text;
-    button.classList.add('btn');
-    answerButtonsElement.appendChild(button);
+    button.innerHTML = answer.text; //sets a button text to what each answer is.
+    button.classList.add('btn'); //adss btn class to each button
+    answerButtonsElement.appendChild(button);  
+    if (answer.correct) { //checks truethy value of correct answer
+      button.dataset.correct = answer.correct; //adds the data attribute to the correct answer button.
+    }
+    button.addEventListener("click", handleSubmit) //adds onclick event to each button
+
 });
+
+
+
+function handleSubmit(e) {
+  const selectedBtn = e.target; //the button that was clicked
+  const isCorrect = selectedBtn.dataset.correct === "true"; //checks if the clicked button is the correct answer
+  if (isCorrect) {
+    selectedBtn.classList.add('correct'); 
+    userScore++;
+  } else {
+    selectedBtn.classList.add('incorrect');
+  }
+  Array.from(answerButtonsElement.children).forEach(button => { //disables all buttons after one has been clicked
+    if (button.dataset.correct === "true") {
+      button.classList.add('correct'); //shows the correct answer after one has been selected
+    }
+    button.disabled = true;
+  });
+  console.log(userScore);
 }
 
+function resetState() {
+  while (answerButtonsElement.firstChild) { //removes all answer buttons before next question is shown.
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+  }
+}
+}
+
+///
 
 
+function nextAnswer() {
+  currentQuestionIndex++;
+  showQuestion();
+}
 
-
-
+console.log(userScore);
 console.log(questionsRandomized);
 
 
 
 startQuiz();
-
-
-
-
-
