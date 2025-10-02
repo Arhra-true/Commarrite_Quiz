@@ -1,8 +1,12 @@
 .correct {
     background-color: green;
+    border: 2px solid black
 }
 
 .incorrect {
     background-color: red;
 }
 
+.selected {
+    border: 4px solid black;
+}
