@@ -115,6 +115,15 @@ function startQuiz() {
 }
 
 function showQuestion() {
+
+  if (currentQuestionIndex <= 8) {
+    nextButton.addEventListener("click", nextAnswer); ///adds event listener each time, making it more sure fire that it removes it when told to.
+  } else {
+    nextButton.innerHTML = "Finish"; //changes button text, meaning I can use the same button for next and finish
+  };
+  
+  ///
+
   let currentQuestion = questionsRandomized[currentQuestionIndex];
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + ". " + currentQuestion.question; //appends question number
@@ -123,14 +132,16 @@ function showQuestion() {
  currentQuestion.answers.forEach(answer => {
     const button = document.createElement('button');
     button.innerHTML = answer.text; //sets a button text to what each answer is.
-    button.classList.add('btn'); //adss btn class to each button
+    button.classList.add('btn'); //adds btn class to each button
     answerButtonsElement.appendChild(button);  
     if (answer.correct) { //checks truethy value of correct answer
       button.dataset.correct = answer.correct; //adds the data attribute to the correct answer button.
+    } else {
+      button.dataset.correct = false; //adds the data attribute to the incorrect answer buttons.
     }
     button.addEventListener("click", handleSubmit) //adds onclick event to each button
-
-});
+  }
+)};
 
 
 
@@ -138,18 +149,26 @@ function handleSubmit(e) {
   const selectedBtn = e.target; //the button that was clicked
   const isCorrect = selectedBtn.dataset.correct === "true"; //checks if the clicked button is the correct answer
   if (isCorrect) {
-    selectedBtn.classList.add('correct'); 
+    selectedBtn.classList.add('correct');
+    selectedBtn.classList.add('selected');
     userScore++;
   } else {
     selectedBtn.classList.add('incorrect');
+    selectedBtn.classList.add('selected');
   }
+  
   Array.from(answerButtonsElement.children).forEach(button => { //disables all buttons after one has been clicked
     if (button.dataset.correct === "true") {
       button.classList.add('correct'); //shows the correct answer after one has been selected
     }
+    if (button.dataset.correct === "false") {
+      button.classList.add('incorrect'); //shows the incorrect answers after one has been selected
+    }
     button.disabled = true;
   });
-  console.log(userScore);
+  
+  console.log(currentQuestionIndex)
+  console.log(userScore)
 }
 
 function resetState() {
@@ -157,17 +176,28 @@ function resetState() {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
-}
+
 
 ///
+
+function showResult() {
+ window.location.href = "../results/resultsPage.html"; //redirects to results page
+}
 
 
 function nextAnswer() {
   currentQuestionIndex++;
+  if (currentQuestionIndex === 9) {
+    nextButton.removeEventListener("click", nextAnswer); ///removes the next button event listener so it doesn't try to tirgger
+  }
+  if (currentQuestionIndex === 9) {
+    nextButton.addEventListener("click", showResult); //adds the showResult event listener to the next button
+  }
   showQuestion();
 }
 
 console.log(userScore);
+
 console.log(questionsRandomized);
 
 
