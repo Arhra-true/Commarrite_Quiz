@@ -182,6 +182,7 @@ function resetState() {
 
 function showResult() {
  window.location.href = "../results/resultsPage.html"; //redirects to results page
+ localStorage.setItem("userScore", userScore)
 }
 
 
@@ -203,3 +204,4 @@ console.log(questionsRandomized);
 
 
 startQuiz();
+
