@@ -64,7 +64,7 @@ const questions = [ //array of questions that are each an object containing an a
            ]
   },
   {
-  question: "An Aeldari maiden world was stolen from realspace by a combined effort of several Haemonculus covens lead by Urien Rakarth, which planet was it?",
+  question: "An Aeldari maiden world was stolen from realspace by the combined effort of several Haemonculus covens, which planet was it?",
   answers: [
     {text: "A: Cadia", correct: false},
     {text: "B: Lethidia", correct: true},
@@ -131,6 +131,8 @@ function showQuestion() {
 
  currentQuestion.answers.forEach(answer => {
     const button = document.createElement('button');
+    const brake = document.createElement('br'); //creates a break element to go between each button
+    answerButtonsElement.appendChild(brake); //appends the break element to the answer buttons div
     button.innerHTML = answer.text; //sets a button text to what each answer is.
     button.classList.add('btn'); //adds btn class to each button
     answerButtonsElement.appendChild(button);  

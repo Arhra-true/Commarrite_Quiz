@@ -1,0 +1,62 @@
+.almendra-sc-regular {
+  font-family: "Almendra SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}  
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+h2 {
+    font-family: "Almendra SC", serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#scoreText {
+    font-family: "Almendra SC", serif;
+    font-size: 25px;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+nav {
+    font-family: 'Almendra SC', serif;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+    padding: 20px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px 20px;
+    display: inline;
+}
+
+#restart-btn {
+    font-family: 'Almendra SC', serif;
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#restart-btn:hover {
+    background-color: #ddd;
+}
