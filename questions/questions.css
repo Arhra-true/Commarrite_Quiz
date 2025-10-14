@@ -4,19 +4,15 @@
   font-style: normal;
 }
 
-.correct {
+.correct.btn {
     background-color: green;
-    border: 2px solid black
 }
 
 .incorrect {
     background-color: red;
-    font-weight: bold;
 }
 
-.selected {
-    border: 4px solid black;
-}
+
 
 h1 {
     font-family: "Almendra SC", serif;
@@ -75,7 +71,10 @@ body {
     border-radius: 10px;
     width: 600px;   
     height: 50px;
-    
+}
+
+.btn:hover {
+    border: 3px solid black;
 }
 
 #next-btn {
@@ -94,6 +93,10 @@ body {
     cursor: pointer;
 }
 
+.btn:disabled {
+    color: white;
+}
+
 nav {
     font-family: 'Almendra SC', serif;
     text-align: center;
@@ -102,5 +105,41 @@ nav {
     color: black;
 }
 
+.selected {
+    border: 3px solid black;
+}
 
 
+@media screen and (max-width: 600px) {
+
+    .quiz {
+        min-width: 275px;
+        margin-top: 5px;
+    }
+
+    .btn {
+        max-width: 225px;
+        font-size:11px
+    }
+
+    h2 {
+        max-width: 250px;
+        font-size: 14px
+    }
+
+    body {
+        max-width: fit-content;
+        
+        
+    }
+
+    #nav {
+        background-color: white;
+        
+    }
+
+    h1 {
+        margin-top: 10px;
+    }
+
+}

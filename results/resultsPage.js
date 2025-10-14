@@ -1,7 +1,7 @@
-
 window.onload = function() {
 
 const userScore = localStorage.getItem('userScore'); //checked via console log that this works
+
 const scoreText = document.getElementById('scoreText'); //gets the scoreText element from the HTML
 let scoreMessage = "";
 
@@ -29,10 +29,6 @@ let scoreMessage = "";
 
 scoreText.innerHTML = scoreMessage; //sets the inner HTML of the scoreText element to the scoreMessage
 
-console.log(scoreText);
-console.log(scoreMessage);
-console.log(userScore);
-console.log(window.document.title);
 }
 
 

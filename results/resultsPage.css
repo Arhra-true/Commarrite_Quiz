@@ -60,3 +60,10 @@ li {
 #restart-btn:hover {
     background-color: #ddd;
 }
+
+@media screen and (max-width: 600px) {
+     body {
+        background-size:cover;
+        min-height: 708px;
+    }
+}
