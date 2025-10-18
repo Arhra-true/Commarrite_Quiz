@@ -9,13 +9,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMMARRITE QUIZ</title>
+    <style id="style">
+      body {
+        font-family: 'Almendra SC', serif;
+      }
+    </style>
     <link rel="stylesheet" href="index.css">
 
 </head>
-<body background="../images/background.jpg" class="bodyStyle">
-  <script src="index.js"></script>
+<body id="body" background="../images/background.jpg"> 
+  <script src="index.js" > </script>
   <header>
     <nav>
+        <input type="checkbox" id="accessBtn" />
+        <label id="accessTxt" for="toggle" class="switch">ACCESSIBILITY</label>
+      <br>
       <a id="help" href="/help/help.html">Help</a>
     </nav>
   <h1 id="Title">Commarrite Quiz</h1>
@@ -31,7 +39,6 @@
   <footer id="footer">
     <h4 id="contact" >Contact</h4>
     <p id="info">For any enquiries, please contact me at commarritequiz@thedarkcity.com</p>
-    <button id="accessibilityBtn">ACCESSIBILITY</button>
   </footer>
 </body>
 </html>

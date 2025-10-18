@@ -1,5 +1,5 @@
 .almendra-sc-regular {
-  font-family: "Almendra SC", serif;
+ 
   font-weight: 400;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 
 
 h1 {
-    font-family: "Almendra SC", serif;
+   
     font-size: 50px;
     font-weight: bold;
     margin-top: 40px;
@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Almendra SC", serif;
+   
     font-size: 25px;
     font-weight: bold;
     padding-bottom: 10px;
@@ -53,7 +53,7 @@ body {
     margin-bottom: 50px;
     align-content: center;
     text-align: center;
-    font-family: "Almendra SC", serif;
+   
     border: 2px solid black;
     padding: 10px;
     background-color: #f0f0f0;  
@@ -63,7 +63,7 @@ body {
 }
 
 .btn {
-    font-family: "Almendra SC", serif;
+   
     font-size: 16px;
     padding: 10px 20px;
     margin: 10px;
@@ -78,7 +78,7 @@ body {
 }
 
 #next-btn {
-    font-family: "Almendra SC", serif;
+   
     font-size: 16px;
     padding: 10px 20px;
     border: 1px solid black;
@@ -98,7 +98,6 @@ body {
 }
 
 nav {
-    font-family: 'Almendra SC', serif;
     text-align: center;
     margin-top: 20px;
     font-size: 30px;
