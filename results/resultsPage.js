@@ -29,8 +29,23 @@ let scoreMessage = "";
 
 scoreText.innerHTML = scoreMessage; //sets the inner HTML of the scoreText element to the scoreMessage
 
+let accessCont = localStorage.getItem("accessCont");
+function setText() {
+    let keepFont = false
+  if (accessCont) {
+    document.body.style.fontFamily = "serif"
+    keepFont = true;
+} else if (accessCont === undefined) {
+    document.body.style.fontFamily = 'Almendra SC'
+}
+if (keepFont === true) {
+    localStorage.setItem("keepFont", keepFont)
+}
 }
 
+setText();
+
+}
 
 
 

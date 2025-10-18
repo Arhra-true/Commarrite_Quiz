@@ -28,18 +28,69 @@ function setRandomQuote() {
 
 setRandomQuote();
 
-let access = document.getElementsByClassName("bodyStyle")
+document.getElementById("accessBtn").addEventListener("click", accessWin);
+const toggle = document.getElementById("accessBtn")
 
-function accessWin() {
-    access = {
-        fontFamily: "serif"
+  function accessWin() {
+    if (toggle.checked) {
+    document.body.style.fontFamily = "serif"
+    globalThis.access = true;
+    let accessOn = true;
+    localStorage.setItem("accessOn", accessOn)
+} else if (toggle) {
+    document.body.style.fontFamily = 'Almendra SC'
+    localStorage.removeItem("accessOn")
+}
+localStorage.setItem("accessTxt", access)
+
+};
+
+function checkButton() {
+    let accessOn = localStorage.getItem("accessOn")
+    if (accessOn) {
+        toggle.checked = true;
+        document.body.style.fontFamily = "serif"
     }
 }
 
-const accessBtn = this.document.getElementById("accessibilityBtn")
-
-accessBtn.addEventListener("click", accessWin)
-
+checkButton()
 
 }
+
+
+
+/*const accessBtn = document.getElementById("accessibilityBtn");
+
+
+
+
+accessBtn.addEventListener("click", accessWin);
+
+
+};
+
+const body = document.getElementsByClassName("bodyStyle")
+
+if(body) {
+    console.log("yes")
+}
+
+function accessWin() {
+    body.style.fontFamily = 'serif'
+}
+*/
+
+
+/*window.onload = function () {
+globalThis.access = document.getElementsByClassName("bodyStyle");
+
+const accessBtn = document.getElementById("accessibilityBtn");
+
+accessBtn.addEventListener("click", accessWin);
+
+function accessWin() {
+    access.classList.add('setSerif')
+}
+}
+*/
 

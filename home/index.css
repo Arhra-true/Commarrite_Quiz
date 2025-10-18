@@ -1,16 +1,16 @@
 
 
 #Title {
-    color: blueviolet;
+    color: black;
     text-align: center;
-    font-family: 'Almendra SC', serif;
+    
     
 }
 
 #Welcome {
-    color: blueviolet;
+    color: black;
     text-align: center;
-    font-family: 'Almendra SC', serif;
+    
     font-size: 30px;
     position: center;
     margin-left: auto;
@@ -21,7 +21,7 @@
 #Descriptor {
     color:black;
     text-align: center;     
-    font-family: 'Almendra SC', serif;
+    
     font-size: 20px;
     position: center;
     margin-left: auto;  
@@ -34,13 +34,13 @@
 #Begin {
     text-align: center;
     display: block;
-    font-family: 'Almendra SC', serif;
+    
     font-size: 40px;
     max-width: max-content;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    color:blueviolet
+    color:black
     
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 nav {
-    font-family: 'Almendra SC', serif;
+    
     text-align: center;
     margin-top: 30px;
     font-size: 20px;
@@ -59,14 +59,14 @@ nav {
 }
 
 #footer {
-    font-family: 'Almendra SC', serif;
+    
     text-align: center;
     font-size: 15px;
     color: black;
 }
 
  h5 {
-    font-family: 'Almendra SC', serif;
+    
     font-size: 15px;
     color: black;
     text-align: center;
@@ -76,10 +76,22 @@ nav {
     
 }
 
-#accessBtn {
+#accessTxt {
     font-family: sans-serif;
+    background-color: white;
     
 }
+
+.txtColour {
+    color: black;
+}
+
+ #info {
+        background-color: white;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+ }
 
 @media screen and (max-width: 600px) {
     body {

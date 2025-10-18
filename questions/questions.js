@@ -1,3 +1,28 @@
+window.onload = function() {
+localStorage.removeItem("accessCont")
+let accessTxt = localStorage.getItem("accessTxt");
+let keepFont = localStorage.getItem("keepFont")
+console.log(keepFont)
+function setText() {
+  if (accessTxt === undefined) {
+    document.body.style.fontFamily = 'Almendra SC'
+} else if (accessTxt) {
+    document.body.style.fontFamily = "serif"
+    let accessCont = true;
+    localStorage.setItem("accessCont", accessCont)
+}
+}
+
+function keepText() {
+if (keepFont) {
+  document.body.style.fontFamily = "serif"
+}
+}
+keepText()
+setText();
+localStorage.removeItem("accessTxt")
+localStorage.removeItem("keepFont")
+}
 
 const questions = [ //array of questions that are each an object containing an array that also hs objects with two properties.
   {
@@ -104,7 +129,8 @@ const nextButton = document.getElementById('next-btn'); //button to submit answe
 ///
 
 let currentQuestionIndex = 0;
-let userScore = 0;
+
+
 
 ///
 
@@ -124,7 +150,7 @@ function showQuestion() {
   };
   
   ///
-
+  
   let currentQuestion = questionsRandomized[currentQuestionIndex];
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + ". " + currentQuestion.question; //appends question number
@@ -197,14 +223,7 @@ function nextAnswer() {
     nextButton.addEventListener("click", showResult); //adds the showResult event listener to the next button
   }
   showQuestion();
-}
 
-console.log(userScore);
-
-console.log(questionsRandomized);
-
-
-
+};
 
 startQuiz();
-

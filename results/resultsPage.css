@@ -1,5 +1,4 @@
 .almendra-sc-regular {
-  font-family: "Almendra SC", serif;
   font-weight: 400;
   font-style: normal;
 }  
@@ -10,14 +9,12 @@ body {
 }
 
 h2 {
-    font-family: "Almendra SC", serif;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
 
 #scoreText {
-    font-family: "Almendra SC", serif;
     font-size: 25px;
     text-align: center;
     max-width: 400px;
@@ -27,7 +24,7 @@ h2 {
 }
 
 nav {
-    font-family: 'Almendra SC', serif;
+ 
     text-align: center;
     margin-top: 30px;
     font-size: 40px;
@@ -45,7 +42,7 @@ li {
 }
 
 #restart-btn {
-    font-family: 'Almendra SC', serif;
+ 
     display: block;
     margin: 30px auto;
     padding: 10px 20px;
