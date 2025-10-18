@@ -27,6 +27,14 @@ li {
     margin-right: auto;
 }
 
+ a {
+    color: black
+ }
+
+ a:hover {
+    color: blue;
+ }
+
 @media screen and (max-width: 600px) {
     #return {
     position: bottom;
@@ -35,4 +43,8 @@ li {
     margin-left: auto;
     margin-right: auto;
     }
+
+    a {
+    color: black
+ }
 }
