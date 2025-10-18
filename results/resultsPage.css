@@ -58,9 +58,21 @@ li {
     background-color: #ddd;
 }
 
+ a {
+    color: black
+ }
+
+ a:hover {
+    color: blue;
+ }
+
 @media screen and (max-width: 600px) {
      body {
         background-size:cover;
         min-height: 708px;
     }
+
+    a {
+    color: black
+ }
 }

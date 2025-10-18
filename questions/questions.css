@@ -108,6 +108,13 @@ nav {
     border: 3px solid black;
 }
 
+ a {
+    color: black
+ }
+
+ a:hover {
+    color: blue;
+ }
 
 @media screen and (max-width: 600px) {
 
@@ -141,4 +148,7 @@ nav {
         margin-top: 10px;
     }
 
+     a {
+    color: black
+ }
 }

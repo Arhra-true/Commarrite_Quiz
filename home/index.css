@@ -31,7 +31,7 @@
 
 }
 
-#Begin {
+#begin {
     text-align: center;
     display: block;
     
@@ -40,8 +40,13 @@
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    color:black
+    color:black;
     
+    
+}
+
+#begin:hover {
+    color:blue
 }
 
 body {
@@ -93,6 +98,14 @@ nav {
         margin-right: auto;
  }
 
+ a {
+    color: black
+ }
+
+ a:hover {
+    color: blue;
+ }
+
 @media screen and (max-width: 600px) {
     body {
         background-size:cover
@@ -118,4 +131,8 @@ nav {
         margin-right: auto;
         color: black;
     }
+
+     a {
+    color: black
+ }
 }
