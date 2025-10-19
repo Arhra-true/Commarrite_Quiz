@@ -1,27 +1,8 @@
 window.onload = function() {
-localStorage.removeItem("accessCont")
-let accessTxt = localStorage.getItem("accessTxt");
-let keepFont = localStorage.getItem("keepFont")
-console.log(keepFont)
-function setText() {
-  if (accessTxt === undefined) {
-    document.body.style.fontFamily = 'Almendra SC'
-} else if (accessTxt) {
-    document.body.style.fontFamily = "serif"
-    let accessCont = true;
-    localStorage.setItem("accessCont", accessCont)
-}
-}
-
-function keepText() {
-if (keepFont) {
-  document.body.style.fontFamily = "serif"
-}
-}
-keepText()
-setText();
-localStorage.removeItem("accessTxt")
-localStorage.removeItem("keepFont")
+let accessOn = localStorage.getItem("accessOn")
+    if (accessOn) {
+        document.body.style.fontFamily = "serif"
+    }
 }
 
 const questions = [ //array of questions that are each an object containing an array that also hs objects with two properties.
